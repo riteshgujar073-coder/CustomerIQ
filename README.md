@@ -158,10 +158,8 @@ http://localhost:8501
 ### Deploy to Streamlit Community Cloud (Free & 1-Click)
 1. Push this repository to GitHub:
    ```bash
-   git init
    git add .
-   git commit -m "CustomerIQ: Initial production commit"
-   git remote add origin https://github.com/<your-username>/CustomerIQ.git
+   git commit -m "CustomerIQ: Production commit"
    git push -u origin main
    ```
 2. Navigate to [share.streamlit.io](https://share.streamlit.io).
