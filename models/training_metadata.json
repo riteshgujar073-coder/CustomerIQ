@@ -1,0 +1,394 @@
+{
+  "features": [
+    "Recency_Days",
+    "Frequency",
+    "Monetary_Spend",
+    "Avg_Order_Value",
+    "Total_Items_Purchased",
+    "Website_Visits",
+    "Avg_Session_Duration_Min",
+    "Discount_Usage_Ratio",
+    "Return_Rate"
+  ],
+  "n_clusters": 5,
+  "metrics": {
+    "inertia": 4519.85,
+    "silhouette_score": 0.4785,
+    "davies_bouldin_score": 0.784,
+    "calinski_harabasz_score": 2481.3,
+    "n_clusters": 5
+  },
+  "evaluation_range": {
+    "k_values": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "inertias": [
+      13783.55,
+      8891.85,
+      6214.71,
+      4519.85,
+      4167.2,
+      3885.23,
+      3736.75,
+      3541.45
+    ],
+    "silhouettes": [
+      0.435,
+      0.4479,
+      0.4357,
+      0.4785,
+      0.441,
+      0.3997,
+      0.3219,
+      0.2392
+    ],
+    "davies_bouldin": [
+      0.8271,
+      0.8209,
+      0.928,
+      0.784,
+      1.0558,
+      1.164,
+      1.4899,
+      1.6526
+    ],
+    "calinski_harabasz": [
+      1579.69,
+      1910.71,
+      2180.21,
+      2481.3,
+      2194.37,
+      1990.73,
+      1787.59,
+      1666.9
+    ],
+    "optimal_k_silhouette": 5,
+    "optimal_k_elbow": 5,
+    "recommended_k": 5
+  },
+  "preprocessing": {
+    "scaling_method": "standard",
+    "outlier_method": "clip",
+    "pca_2d_variance": 72.83,
+    "pca_3d_variance": 85.72
+  },
+  "profiles": [
+    {
+      "cluster_id": 0,
+      "persona_name": "Bargain & Deal Seekers",
+      "badge": "Price Sensitive",
+      "icon": "\ud83c\udff7\ufe0f",
+      "color": "#F59E0B",
+      "customer_count": 599,
+      "customer_pct": 24.0,
+      "total_revenue": 444375.41,
+      "revenue_pct": 9.3,
+      "avg_recency": 51.4,
+      "avg_frequency": 9.1,
+      "avg_monetary": 741.86,
+      "avg_aov": 85.4,
+      "avg_discount": 69.4,
+      "avg_visits": 74.1,
+      "top_characteristics": [
+        {
+          "feature": "Discount_Usage_Ratio",
+          "cluster_mean": 0.69,
+          "pop_mean": 0.33,
+          "pct_diff": 111.3,
+          "z_score": 1.62,
+          "abs_z": 1.620188840119445,
+          "direction": "higher"
+        },
+        {
+          "feature": "Avg_Order_Value",
+          "cluster_mean": 85.4,
+          "pop_mean": 182.4,
+          "pct_diff": -53.2,
+          "z_score": -0.959,
+          "abs_z": 0.9592450470314122,
+          "direction": "lower"
+        },
+        {
+          "feature": "Monetary_Spend",
+          "cluster_mean": 741.86,
+          "pop_mean": 1914.59,
+          "pct_diff": -61.3,
+          "z_score": -0.75,
+          "abs_z": 0.7497329679926086,
+          "direction": "lower"
+        }
+      ],
+      "playbook": {
+        "objective": "Margin Preservation & Timed Promotion Conversion",
+        "channels": [
+          "Flash Sale SMS",
+          "Telegram/WhatsApp Deal Alerts",
+          "Exit-Intent Web Overlays"
+        ],
+        "strategy": "Channel price sensitivity into high-margin clearance stock and time-limited deals.",
+        "tactics": [
+          "Deploy countdown timers on clearance/outlet collections.",
+          "Condition discounts on minimum spend thresholds (e.g., 'Save 20% on orders above $120').",
+          "Recommend budget bundles to elevate unit count per checkout."
+        ],
+        "sample_campaign": "\ud83c\udff7\ufe0f 24-Hour Flash Drop: Up to 40% off selected bestsellers while supplies last!",
+        "conversion_opportunity": "Clear aging inventory with bounded discounts while boosting overall basket items."
+      }
+    },
+    {
+      "cluster_id": 1,
+      "persona_name": "VIP Champions",
+      "badge": "High-Value Hero",
+      "icon": "\ud83d\udc8e",
+      "color": "#6366F1",
+      "customer_count": 450,
+      "customer_pct": 18.0,
+      "total_revenue": 2189830.19,
+      "revenue_pct": 45.8,
+      "avg_recency": 12.7,
+      "avg_frequency": 22.8,
+      "avg_monetary": 4866.29,
+      "avg_aov": 271.46,
+      "avg_discount": 10.1,
+      "avg_visits": 112.1,
+      "top_characteristics": [
+        {
+          "feature": "Monetary_Spend",
+          "cluster_mean": 4866.29,
+          "pop_mean": 1914.59,
+          "pct_diff": 154.2,
+          "z_score": 1.887,
+          "abs_z": 1.8870304590993754,
+          "direction": "higher"
+        },
+        {
+          "feature": "Frequency",
+          "cluster_mean": 22.83,
+          "pop_mean": 11.04,
+          "pct_diff": 106.8,
+          "z_score": 1.691,
+          "abs_z": 1.690883772409269,
+          "direction": "higher"
+        },
+        {
+          "feature": "Website_Visits",
+          "cluster_mean": 112.08,
+          "pop_mean": 59.75,
+          "pct_diff": 87.6,
+          "z_score": 1.492,
+          "abs_z": 1.4916786219112363,
+          "direction": "higher"
+        }
+      ],
+      "playbook": {
+        "objective": "Maximize Lifetime Value (LTV) & Brand Advocacy",
+        "channels": [
+          "Dedicated VIP Concierge",
+          "Private App Early Access",
+          "Exclusive Direct Mail"
+        ],
+        "strategy": "Reward loyalty with bespoke privileges without diluting brand prestige with discounts.",
+        "tactics": [
+          "Invite to exclusive pre-launch product drops 48 hours prior to public.",
+          "Offer zero-threshold express shipping and dedicated 24/7 priority support.",
+          "Implement a tiered referral incentive (e.g. Give $50, Get $50)."
+        ],
+        "sample_campaign": "\u2728 Early Access: Exclusive preview of the Luxury Summer Collection just for you.",
+        "conversion_opportunity": "High AOV upsells, premium warranty bundles, annual membership upgrades."
+      }
+    },
+    {
+      "cluster_id": 2,
+      "persona_name": "At-Risk High-Value Lapsers",
+      "badge": "Urgent Win-Back",
+      "icon": "\u26a0\ufe0f",
+      "color": "#EF4444",
+      "customer_count": 400,
+      "customer_pct": 16.0,
+      "total_revenue": 584319.39,
+      "revenue_pct": 12.2,
+      "avg_recency": 125.0,
+      "avg_frequency": 5.1,
+      "avg_monetary": 1460.8,
+      "avg_aov": 290.89,
+      "avg_discount": 20.1,
+      "avg_visits": 15.8,
+      "top_characteristics": [
+        {
+          "feature": "Recency_Days",
+          "cluster_mean": 125.0,
+          "pop_mean": 49.89,
+          "pct_diff": 150.5,
+          "z_score": 1.987,
+          "abs_z": 1.9866250368460328,
+          "direction": "higher"
+        },
+        {
+          "feature": "Return_Rate",
+          "cluster_mean": 0.18,
+          "pop_mean": 0.09,
+          "pct_diff": 94.1,
+          "z_score": 1.542,
+          "abs_z": 1.5420104777583903,
+          "direction": "higher"
+        },
+        {
+          "feature": "Avg_Session_Duration_Min",
+          "cluster_mean": 7.08,
+          "pop_mean": 14.89,
+          "pct_diff": -52.5,
+          "z_score": -1.437,
+          "abs_z": 1.437450718458549,
+          "direction": "lower"
+        }
+      ],
+      "playbook": {
+        "objective": "Urgent Churn Prevention & Win-Back",
+        "channels": [
+          "Automated Win-Back Email Flow",
+          "Retargeting Ads (Meta & Google)",
+          "Feedback Survey SMS"
+        ],
+        "strategy": "Diagnose disengagement, resolve friction, and provide a compelling re-activation incentive.",
+        "tactics": [
+          "Trigger automated Day-60/Day-90 inactivity re-engagement email sequence.",
+          "Offer a high-value 'We Miss You' voucher with expiry within 7 days.",
+          "Prompt customer satisfaction survey with an immediate perk for completion."
+        ],
+        "sample_campaign": "\ud83d\udc4b It's been a while, Alex! Here is $25 off your next order to welcome you back.",
+        "conversion_opportunity": "Re-capturing 10-15% of at-risk accounts recovers high-margin recurring spend."
+      }
+    },
+    {
+      "cluster_id": 3,
+      "persona_name": "Loyal Steady Spenders",
+      "badge": "Core Retention",
+      "icon": "\ud83c\udf1f",
+      "color": "#10B981",
+      "customer_count": 700,
+      "customer_pct": 28.0,
+      "total_revenue": 1476574.39,
+      "revenue_pct": 30.8,
+      "avg_recency": 45.5,
+      "avg_frequency": 13.0,
+      "avg_monetary": 2109.39,
+      "avg_aov": 166.69,
+      "avg_discount": 25.2,
+      "avg_visits": 55.1,
+      "top_characteristics": [
+        {
+          "feature": "Return_Rate",
+          "cluster_mean": 0.07,
+          "pop_mean": 0.09,
+          "pct_diff": -26.3,
+          "z_score": -0.431,
+          "abs_z": 0.43112203059633464,
+          "direction": "lower"
+        },
+        {
+          "feature": "Discount_Usage_Ratio",
+          "cluster_mean": 0.25,
+          "pop_mean": 0.33,
+          "pct_diff": -23.3,
+          "z_score": -0.34,
+          "abs_z": 0.3397344976441573,
+          "direction": "lower"
+        },
+        {
+          "feature": "Frequency",
+          "cluster_mean": 13.0,
+          "pop_mean": 11.04,
+          "pct_diff": 17.7,
+          "z_score": 0.281,
+          "abs_z": 0.2808227839016546,
+          "direction": "higher"
+        }
+      ],
+      "playbook": {
+        "objective": "Frequency Acceleration & Cross-Category Expansion",
+        "channels": [
+          "Personalized Email Drips",
+          "Personalized Web Recommendations",
+          "App Push Notifications"
+        ],
+        "strategy": "Introduce complementary product categories based on previous purchase sequences.",
+        "tactics": [
+          "Deploy dynamic bundle recommendations ('Frequently Bought Together').",
+          "Offer tiered milestone rewards: 'Spend $150 more this month for Silver tier'.",
+          "Re-engage at average repurchase interval (every 30-45 days)."
+        ],
+        "sample_campaign": "\u2b50 We noticed you love Fashion \u2014 Check out these matching Home arrivals curated for you.",
+        "conversion_opportunity": "15-20% basket size increase via algorithmically paired accessories."
+      }
+    },
+    {
+      "cluster_id": 4,
+      "persona_name": "New Promising Explorers",
+      "badge": "Nurture & Activate",
+      "icon": "\ud83d\ude80",
+      "color": "#06B6D4",
+      "customer_count": 351,
+      "customer_pct": 14.0,
+      "total_revenue": 91388.0,
+      "revenue_pct": 1.9,
+      "avg_recency": 18.2,
+      "avg_frequency": 2.0,
+      "avg_monetary": 260.36,
+      "avg_aov": 141.48,
+      "avg_discount": 29.4,
+      "avg_visits": 27.5,
+      "top_characteristics": [
+        {
+          "feature": "Frequency",
+          "cluster_mean": 2.05,
+          "pop_mean": 11.04,
+          "pct_diff": -81.4,
+          "z_score": -1.29,
+          "abs_z": 1.2898653460516234,
+          "direction": "lower"
+        },
+        {
+          "feature": "Total_Items_Purchased",
+          "cluster_mean": 5.21,
+          "pop_mean": 27.69,
+          "pct_diff": -81.2,
+          "z_score": -1.135,
+          "abs_z": 1.134512110536389,
+          "direction": "lower"
+        },
+        {
+          "feature": "Monetary_Spend",
+          "cluster_mean": 260.36,
+          "pop_mean": 1914.59,
+          "pct_diff": -86.4,
+          "z_score": -1.058,
+          "abs_z": 1.057556285077451,
+          "direction": "lower"
+        }
+      ],
+      "playbook": {
+        "objective": "First-to-Second Purchase Conversion (Activation)",
+        "channels": [
+          "Welcome Email Series",
+          "In-App Onboarding Carousel",
+          "Social Proof Showcase"
+        ],
+        "strategy": "Nurture trust, educate on platform perks, and secure the vital second purchase within 30 days.",
+        "tactics": [
+          "Send 3-part educational welcome flow (Brand story -> Top rated picks -> Social proof/reviews).",
+          "Provide a 10% coupon valid for 14 days on their second order.",
+          "Personalize homepage landing based on their initial category view."
+        ],
+        "sample_campaign": "\ud83c\udf89 Welcome to the Club! Enjoy 10% off your next favorite find with code WELCOME10.",
+        "conversion_opportunity": "Turning single-order buyers into repeat customers yields a 3x lifetime value jump."
+      }
+    }
+  ]
+}
